@@ -11,4 +11,4 @@ router.put('/spoilers/:id', controller.atualizar);
 
 router.delete('/spoilers/:id', controller.excluir);
 
-module.exports = router
+module.exports = router;

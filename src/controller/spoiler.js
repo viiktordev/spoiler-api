@@ -3,7 +3,7 @@ const Spoiler = require('../model/spoiler');
 exports.buscar = (req, resp, next) => {
     const id = req.params.id;
 
-    Spoiler.findById(id)
+    Spoiler.findByPk(id)
         .then(spoiler => {
             (spoiler) ? resp.send(spoiler) : resp.status(404).send;
         })

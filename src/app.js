@@ -18,8 +18,9 @@ app.use((error, req, resp, next) => {
 });
 
 
-sequelize.sync({ force : true }).then(() => {
+sequelize.sync({ force : false }).then(() => {
     const port = 3000;
+    const hostname = 'localhost';
     
     app.set('port', port);
     
